@@ -73,7 +73,8 @@ PRODUCT_PACKAGES += \
     SafetyHubPrebuilt \
     Dialer \
     OmniJaws \
-    OmniStyle
+    OmniStyle \
+    Longshot
 
 # Accents
 PRODUCT_PACKAGES += \
