@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
     BlissPapers \
     SettingsIntelligenceGooglePrebuilt \
     Lawnchair \
+    Longshot \
     NexusWallpapersStubPrebuilt2019Static \
     GalleryGoPrebuilt \
     PixelThemesStub2019 \
@@ -73,8 +74,7 @@ PRODUCT_PACKAGES += \
     SafetyHubPrebuilt \
     Dialer \
     OmniJaws \
-    OmniStyle \
-    Longshot
+    OmniStyle
 
 # Accents
 PRODUCT_PACKAGES += \
@@ -100,7 +100,12 @@ PRODUCT_COPY_FILES += \
 
 # Bliss Product Permission
 PRODUCT_COPY_FILES += \
-    vendor/bliss/config/permissions/privapp-permissions-bliss-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-bliss.xml
+    vendor/bliss/config/permissions/privapp-permissions-bliss-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-bliss.xml \
+    vendor/bliss/config/permissions/privapp-permissions-google_prebuilt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google_prebuilt.xml
+
+# Hidden api whitelisted apps
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/common/etc/sysconfig/bliss-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/bliss-hiddenapi-package-whitelist.xml
 
 # Lawnchair
 PRODUCT_COPY_FILES += \
